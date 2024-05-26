@@ -7,32 +7,13 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    # utils
     ack
     aria2
-    clojure
-    clojure-lsp
-    dolphin
-    fg42.outputs.packages.x86_64-linux.default
     file
-    firefox
-    gimp
-    git
     htop
-    hyprland
-    hyprlock
-    hyprpaper
-    hyprshot
-    inkscape
-    networkmanagerapplet
     nix-tree
-    obs-studio
-    pavucontrol
-    pcmanfm
-    rofi-wayland
     sshfs
-    sublime
-    telegram-desktop
-    terminator
     thefuck
     tldr
     tmux
@@ -40,9 +21,46 @@
     tree
     unzip
     v2raya
-    vim
     wget
     zip
+
+    # desktop
+    hyprland
+    hyprlock
+    hyprpaper
+    hyprshot
+    networkmanagerapplet
+    rofi-wayland
+    wl-clipboard
+
+    # gui
+    ark
+    blender
+    darktable
+    dolphin
+    gimp
+    inkscape
+    libreoffice
+    obs-studio
+    pavucontrol
+    pcmanfm
+    sublime
+    telegram-desktop
+    terminator
+    zafiro-icons
+
+    # browsers
+    firefox
+    librewolf
+
+    # code
+    clang-tools
+    clojure
+    clojure-lsp
+    fg42.outputs.packages.x86_64-linux.default
+    git
+    vim
+    virtualenv
   ];
 
   home.stateVersion = "23.11";
