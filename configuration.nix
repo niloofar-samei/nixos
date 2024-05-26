@@ -107,10 +107,32 @@
     description = "Niloofar";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      firefox
-      kate
+      mlocate
+      zsh
+      zsh-autosuggestions
+      zsh-syntax-highlighting
+
+    #  firefox
+    #  kate
     #  thunderbird
     ];
+  };
+
+  users.defaultUserShell = pkgs.zsh;
+  users.users.niloofar.shell = pkgs.zsh;
+  environment.shells = with pkgs; [ zsh];
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+    
+    ohMyZsh = {
+      enable = true;
+      plugins = [ "git" "lein" "thefuck" ];
+      theme = "bira";
+    };
   };
 
   # Allow unfree packages
