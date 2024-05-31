@@ -18,7 +18,7 @@
 
   "$terminal" = "terminator";
   "$fileManager" = "pcmanfm";
-  "$menu" = "rofi -show drun -show-icons -theme arthur";
+  "$menu" = "rofi -show drun -show-icons -theme android_notification";
   "$hyprshot" = "hyprshot -m output --clipboard-only";
   "$hyprlock" = "hyprlock";
 
