@@ -42,6 +42,7 @@
     inkscape
     libreoffice
     libsForQt5.filelight
+    libsForQt5.konsole
     libsForQt5.qt5ct
     obs-studio
     pavucontrol
