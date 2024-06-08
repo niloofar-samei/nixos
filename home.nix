@@ -7,6 +7,7 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+
     # utils
     ack
     aria2
@@ -62,6 +63,8 @@
     clojure-lsp
     fg42.outputs.packages.x86_64-linux.default
     git
+    php
+    php83Packages.composer
     vim
     virtualenv
   ];

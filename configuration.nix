@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -165,8 +165,23 @@
   # services.openssh.enable = true;
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
+  
+  #networking.firewall.allowedTCPPorts = [ 80 443 ];
+  services.httpd.enable = true;
+  services.httpd.enablePHP = true;
+  services.mysql.enable = true;
+  services.mysql.package = pkgs.mariadb;
+
+  services.httpd.virtualHosts."html" = {
+    documentRoot = "/var/www/html";
+  };
+
+  systemd.tmpfiles.rules = [
+    "d /var/www/html"
+    "f /var/www/html/index.php - - - - <?php phpinfo();"
+  ];
+  
+# networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
