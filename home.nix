@@ -51,6 +51,7 @@
     sublime
     telegram-desktop
     terminator
+    vlc
     zafiro-icons
 
     # browsers
