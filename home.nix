@@ -102,14 +102,25 @@
     systemd.enable = true;
   };
 
-  home.file = {
-    ".config/hypr/hyprlock.conf".source = ./hypr/hyprlock.conf;
-    ".config/hypr/hyprpaper.conf".text = ''
-      preload = ~/src/nixos/wall.jpg
-      wallpaper = , ~/src/nixos/wall.jpg
-      splash = false
-      ipc = off
-    '';
+  programs.hyprlock = {
+    enable = true;
+    settings = import ./hypr/hyprlock.nix;
   };
+
+  programs.direnv = {
+    enable = true;
+    enableZshIntegration = true;
+    nix-direnv.enable = true;
+  };
+
+  #home.file = {
+    #".config/hypr/hyprlock.conf".source = ./hypr/hyprlock.conf;
+    #".config/hypr/hyprpaper.conf".text = ''
+      #preload = ~/src/nixos/wall.jpg
+      #wallpaper = , ~/src/nixos/wall.jpg
+      #splash = false
+      #ipc = off
+    #'';
+  #};
 
 }
