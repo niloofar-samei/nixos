@@ -117,31 +117,28 @@
     "emacs-overlay": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": [
-          "fg42",
-          "nixpkgs"
-        ],
+        "nixpkgs": "nixpkgs",
         "nixpkgs-stable": "nixpkgs-stable"
       },
       "locked": {
-        "lastModified": 1715274454,
-        "narHash": "sha256-QnQwZXWFE9fj1Y/0DZPRcVQIY/J8ejP6QtWd5QhMpQ8=",
+        "lastModified": 1707815184,
+        "narHash": "sha256-WFoDXgaPdhjgQB3ut+ZN+VT7e60Yw+KUyvUkOSu5Wto=",
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "c6e7308733e76548d10615d74669919a243e93c8",
+        "rev": "0f7f3b39157419f3035a2dad39fbaf8a4ba0448d",
         "type": "github"
       },
       "original": {
         "owner": "nix-community",
         "repo": "emacs-overlay",
-        "rev": "c6e7308733e76548d10615d74669919a243e93c8",
+        "rev": "0f7f3b39157419f3035a2dad39fbaf8a4ba0448d",
         "type": "github"
       }
     },
     "emacs-overlay_2": {
       "inputs": {
         "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "nixpkgs-stable": "nixpkgs-stable_2"
       },
       "locked": {
@@ -163,21 +160,21 @@
       "inputs": {
         "emacs-overlay": "emacs-overlay",
         "flake-parts": "flake-parts",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": "nixpkgs_2",
         "noether": "noether"
       },
       "locked": {
-        "lastModified": 1716584674,
-        "narHash": "sha256-i7jTVICtHR1FGIeR49KAkoiSFFi02htjMwnpqN1FyCQ=",
+        "lastModified": 1715003838,
+        "narHash": "sha256-uT6tQ0SofZLVqvb+EzYPo3XcYLBubtiJwtLvxZUbvhA=",
         "ref": "refs/heads/master",
-        "rev": "78efcb37f0db4660392a57d25d89a4c89baac1f3",
-        "revCount": 1185,
+        "rev": "aeb4f1a6a28ce50b902024ec24de5bf4794caf58",
+        "revCount": 1158,
         "type": "git",
-        "url": "https://devheroes.codes/FG42/FG42"
+        "url": "https://devheroes.codes/pouya-abbassi/FG42"
       },
       "original": {
         "type": "git",
-        "url": "https://devheroes.codes/FG42/FG42"
+        "url": "https://devheroes.codes/pouya-abbassi/FG42"
       }
     },
     "flake-compat": {
@@ -344,17 +341,17 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1707451808,
-        "narHash": "sha256-UwDBUNHNRsYKFJzyTMVMTF5qS4xeJlWoeyJf+6vvamU=",
+        "lastModified": 1718895438,
+        "narHash": "sha256-k3JqJrkdoYwE3fHE6xGDY676AYmyh4U2Zw+0Bwe5DLU=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "442d407992384ed9c0e6d352de75b69079904e4e",
+        "rev": "d603719ec6e294f034936c0d0dc06f689d91b6c3",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
+        "ref": "nixos-unstable",
         "repo": "nixpkgs",
-        "rev": "442d407992384ed9c0e6d352de75b69079904e4e",
         "type": "github"
       }
     },
@@ -422,6 +419,22 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1707451808,
+        "narHash": "sha256-UwDBUNHNRsYKFJzyTMVMTF5qS4xeJlWoeyJf+6vvamU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "442d407992384ed9c0e6d352de75b69079904e4e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "442d407992384ed9c0e6d352de75b69079904e4e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1707689078,
         "narHash": "sha256-UUGmRa84ZJHpGZ1WZEBEUOzaPOWG8LZ0yPg1pdDF/yM=",
         "owner": "NixOS",
@@ -436,7 +449,23 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs_4": {
+      "locked": {
+        "lastModified": 1707451808,
+        "narHash": "sha256-UwDBUNHNRsYKFJzyTMVMTF5qS4xeJlWoeyJf+6vvamU=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "442d407992384ed9c0e6d352de75b69079904e4e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "442d407992384ed9c0e6d352de75b69079904e4e",
+        "type": "github"
+      }
+    },
+    "nixpkgs_5": {
       "locked": {
         "lastModified": 1717179513,
         "narHash": "sha256-vboIEwIQojofItm2xGCdZCzW96U85l9nDW3ifMuAIdM=",
@@ -452,7 +481,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_4": {
+    "nixpkgs_6": {
       "locked": {
         "lastModified": 1714912032,
         "narHash": "sha256-clkcOIkg8G4xuJh+1onLG4HPMpbtzdLv4rHxFzgsH9c=",
@@ -472,22 +501,19 @@
       "inputs": {
         "emacs-overlay": "emacs-overlay_2",
         "flake-parts": "flake-parts_2",
-        "nixpkgs": [
-          "fg42",
-          "nixpkgs"
-        ]
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1715464233,
-        "narHash": "sha256-VPhsO6yVPq1h0pI+tBnH+/JCDWUZVaFrPy782dOmu2c=",
-        "ref": "refs/tags/v0.3.0",
-        "rev": "5c40c1a5783b0904fb106bd6cc70671e7b1e7320",
-        "revCount": 57,
+        "lastModified": 1714648678,
+        "narHash": "sha256-CxLSUYRk2quey0skgxa+v8mVE+pGSSPcxtK0uFq6YkQ=",
+        "ref": "refs/tags/v0.1.11",
+        "rev": "b4e667a73a0de7d83f78910d6fa3acc3b3044675",
+        "revCount": 53,
         "type": "git",
         "url": "https://devheroes.codes/lxsameer/noether"
       },
       "original": {
-        "ref": "refs/tags/v0.3.0",
+        "ref": "refs/tags/v0.1.11",
         "type": "git",
         "url": "https://devheroes.codes/lxsameer/noether"
       }
@@ -496,7 +522,7 @@
       "inputs": {
         "fg42": "fg42",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_3",
+        "nixpkgs": "nixpkgs_5",
         "stylix": "stylix"
       }
     },
@@ -512,7 +538,7 @@
         "flake-compat": "flake-compat",
         "gnome-shell": "gnome-shell",
         "home-manager": "home-manager_2",
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_6"
       },
       "locked": {
         "lastModified": 1716895458,
