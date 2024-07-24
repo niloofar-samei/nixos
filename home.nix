@@ -20,6 +20,8 @@
     tmux
     traceroute
     tree
+    udiskie
+    udisks
     unzip
     v2raya
     wget
