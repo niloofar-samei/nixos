@@ -127,7 +127,9 @@
     enableCompletion = true;
     autosuggestions.enable = true;
     syntaxHighlighting.enable = true;
-    
+   
+    shellInit = "eval \"$(direnv hook zsh)\"";
+ 
     ohMyZsh = {
       enable = true;
       plugins = [ "git" "lein" "thefuck" ];
