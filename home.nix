@@ -50,7 +50,7 @@
     obs-studio
     pavucontrol
     pcmanfm
-    sublime
+    sublime3
     telegram-desktop
     terminator
     vlc
