@@ -8,6 +8,8 @@
 
   home.packages = with pkgs; [
 
+    postgresql
+
     # utils
     ack
     aria2

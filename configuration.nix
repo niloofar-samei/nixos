@@ -173,8 +173,8 @@
   #networking.firewall.allowedTCPPorts = [ 80 443 ];
   services.httpd.enable = true;
   services.httpd.enablePHP = true;
-  services.mysql.enable = true;
-  services.mysql.package = pkgs.mariadb;
+  ##services.mysql.enable = true;
+  ##services.mysql.package = pkgs.mariadb;
 
   services.httpd.virtualHosts."html" = {
     documentRoot = "/var/www/html";
@@ -184,6 +184,15 @@
     "d /var/www/html"
     "f /var/www/html/index.php - - - - <?php phpinfo();"
   ];
+
+ services.postgresql = {
+    enable = true;
+    ensureDatabases = [ "mydatabase" ];
+    authentication = pkgs.lib.mkOverride 10 ''
+      #type database  DBuser  auth-method
+      local all       all     trust
+    '';
+  };
   
 # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
