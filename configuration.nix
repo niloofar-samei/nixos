@@ -173,8 +173,6 @@
   #networking.firewall.allowedTCPPorts = [ 80 443 ];
   services.httpd.enable = true;
   services.httpd.enablePHP = true;
-  ##services.mysql.enable = true;
-  ##services.mysql.package = pkgs.mariadb;
 
   services.httpd.virtualHosts."html" = {
     documentRoot = "/var/www/html";
