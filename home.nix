@@ -1,80 +1,81 @@
 { config, pkgs, lib, fg42, ... }:
 
 {
-  home.username = "niloofar";
-  home.homeDirectory = "/home/niloofar";
-
   nixpkgs.config.allowUnfree = true;
+  
+  home = {
+    username = "niloofar";
+    homeDirectory = "/home/niloofar";
+    stateVersion = "23.11";
 
-  home.packages = with pkgs; [
+    packages = with pkgs; [
 
-    postgresql
+      # utils
+      ack
+      aria2
+      file
+      htop
+      nix-tree
+      sshfs
+      thefuck
+      tldr
+      tmux
+      traceroute
+      tree
+      udiskie
+      udisks
+      unzip
+      v2raya
+      wget
+      zip
 
-    # utils
-    ack
-    aria2
-    file
-    htop
-    nix-tree
-    sshfs
-    thefuck
-    tldr
-    tmux
-    traceroute
-    tree
-    udiskie
-    udisks
-    unzip
-    v2raya
-    wget
-    zip
+      # desktop
+      hyprland
+      hyprlock
+      hyprpaper
+      hyprshot
+      networkmanagerapplet
+      rofi-wayland
+      wl-clipboard
 
-    # desktop
-    hyprland
-    hyprlock
-    hyprpaper
-    hyprshot
-    networkmanagerapplet
-    rofi-wayland
-    wl-clipboard
+      # gui
+      ark
+      blender
+      darktable
+      dolphin
+      gimp
+      inkscape
+      libreoffice
+      libsForQt5.filelight
+      libsForQt5.konsole
+      libsForQt5.qt5ct
+      obs-studio
+      pavucontrol
+      pcmanfm
+      sublime3
+      telegram-desktop
+      terminator
+      vlc
+      zafiro-icons
 
-    # gui
-    ark
-    blender
-    darktable
-    dolphin
-    gimp
-    inkscape
-    libreoffice
-    libsForQt5.filelight
-    libsForQt5.konsole
-    libsForQt5.qt5ct
-    obs-studio
-    pavucontrol
-    pcmanfm
-    sublime3
-    telegram-desktop
-    terminator
-    vlc
-    zafiro-icons
+      # browsers
+      firefox
+      librewolf
 
-    # browsers
-    firefox
-    librewolf
+      # code
+      clang-tools
+      clojure
+      clojure-lsp
+      fg42.outputs.packages.x86_64-linux.default
+      git
+      php
+      php83Packages.composer
+      postgresql
+      vim
+      virtualenv
+    ];
+  };
 
-    # code
-    clang-tools
-    clojure
-    clojure-lsp
-    fg42.outputs.packages.x86_64-linux.default
-    git
-    php
-    php83Packages.composer
-    vim
-    virtualenv
-  ];
-
-  home.stateVersion = "23.11";
   programs.home-manager.enable = true;
 
   programs.emacs = {
@@ -116,15 +117,5 @@
     enableZshIntegration = true;
     nix-direnv.enable = true;
   };
-
-  #home.file = {
-    #".config/hypr/hyprlock.conf".source = ./hypr/hyprlock.conf;
-    #".config/hypr/hyprpaper.conf".text = ''
-      #preload = ~/src/nixos/wall.jpg
-      #wallpaper = , ~/src/nixos/wall.jpg
-      #splash = false
-      #ipc = off
-    #'';
-  #};
 
 }
