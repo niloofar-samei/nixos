@@ -70,7 +70,6 @@
       git
       php
       php83Packages.composer
-      postgresql
       vim
       virtualenv
     ];

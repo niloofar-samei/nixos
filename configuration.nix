@@ -105,15 +105,9 @@
       documentRoot = "/var/www/html";
     };
 
-    postgresql = {
-      enable = true;
-      ensureDatabases = [ "mydatabase" ];
-      authentication = pkgs.lib.mkOverride 10 ''
-        #type database  DBuser  auth-method
-        local all       all     trust
-      '';
-    };
-  
+    mysql.enable = true;
+    mysql.package = pkgs.mariadb;
+
   };
 
   # Configure console keymap
