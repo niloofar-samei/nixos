@@ -13,6 +13,7 @@
       # utils
       ack
       aria2
+      cmatrix
       file
       htop
       nix-tree
