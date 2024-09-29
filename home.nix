@@ -10,6 +10,8 @@
 
     packages = with pkgs; [
 
+      steam
+
       # utils
       ack
       aria2
