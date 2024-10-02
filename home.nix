@@ -11,6 +11,7 @@
     packages = with pkgs; [
 
       steam
+      whois
 
       # utils
       ack
