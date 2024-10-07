@@ -12,6 +12,7 @@
 
       steam
       whois
+      leiningen
 
       # utils
       ack
