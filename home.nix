@@ -10,10 +10,6 @@
 
     packages = with pkgs; [
 
-      steam
-      whois
-      leiningen
-
       # utils
       ack
       aria2
@@ -32,6 +28,7 @@
       unzip
       v2raya
       wget
+      whois
       zip
 
       # desktop
@@ -57,6 +54,7 @@
       obs-studio
       pavucontrol
       pcmanfm
+      steam
       sublime3
       telegram-desktop
       terminator
@@ -73,6 +71,7 @@
       clojure-lsp
       fg42.outputs.packages.x86_64-linux.default
       git
+      leiningen
       php
       php83Packages.composer
       vim
