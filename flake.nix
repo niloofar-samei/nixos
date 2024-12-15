@@ -6,7 +6,7 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     stylix = { url = "github:danth/stylix";  };
-    fg42.url = "git+https://devheroes.codes/pouya-abbassi/FG42";
+    fg42.url = "git+https://git.sr.ht/~lxsameer/FG42";
   };
 
   outputs = inputs@{ nixpkgs, home-manager, fg42, stylix, ... }: {
