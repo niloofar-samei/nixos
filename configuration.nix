@@ -130,7 +130,7 @@
     users.niloofar = {
       isNormalUser = true;
       description = "Niloofar";
-      extraGroups = [ "networkmanager" "wheel" ];
+      extraGroups = [ "networkmanager" "wheel" "dialout"];
       packages = with pkgs; [
         mlocate
         zsh
