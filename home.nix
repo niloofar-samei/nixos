@@ -66,7 +66,7 @@
       librewolf
 
       # code
-      clang-tools
+      #clang-tools
       clojure
       clojure-lsp
       fg42.outputs.packages.x86_64-linux.default
