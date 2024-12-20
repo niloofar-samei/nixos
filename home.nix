@@ -81,13 +81,13 @@
 
   programs.home-manager.enable = true;
 
-  programs.emacs = {
-    enable = true;
-    extraPackages = epkgs: [
-      epkgs.nix-mode
-      epkgs.magit
-    ];
-  };
+  #programs.emacs = {
+    #enable = true;
+    #extraPackages = epkgs: [
+      #epkgs.nix-mode
+      #epkgs.magit
+    #];
+  #};
 
   programs.waybar = {
     enable = true;
