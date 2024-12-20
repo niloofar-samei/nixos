@@ -13,6 +13,7 @@
       # utils
       ack
       aria2
+      asusctl
       cmatrix
       file
       htop
