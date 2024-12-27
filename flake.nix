@@ -2,11 +2,23 @@
   description = "NixOS configuration";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/release-24.11";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    stylix = { url = "github:danth/stylix";  };
-    fg42.url = "git+https://git.sr.ht/~lxsameer/FG42";
+
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpxgs.follows = "nixpkgs";
+      };
+
+    fg42 = {
+      url = "git+https://git.sr.ht/~lxsameer/FG42";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, fg42, stylix, ... }: {
