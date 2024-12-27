@@ -46,11 +46,14 @@
       darktable
       dolphin
       gimp
+      graphite-kde-theme
       inkscape
       libreoffice
       libsForQt5.filelight
       libsForQt5.konsole
       libsForQt5.qt5ct
+      libsForQt5.qt5ct
+      lxappearance
       obs-studio
       pavucontrol
       pcmanfm
