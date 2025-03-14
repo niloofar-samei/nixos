@@ -12,7 +12,7 @@
 
     stylix = {
       url = "github:danth/stylix";
-      inputs.nixpxgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
       };
 
     fg42 = {
