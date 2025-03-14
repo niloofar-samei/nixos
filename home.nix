@@ -75,6 +75,7 @@
       fg42.outputs.packages.x86_64-linux.default
       git
       leiningen
+      libpqxx
       php
       php83Packages.composer
       postgresql
