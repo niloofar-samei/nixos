@@ -84,6 +84,39 @@
 
   programs.home-manager.enable = true;
 
+  programs.tmux = {
+      enable = true;
+      terminal = "tmux-256color";
+      historyLimit = 100000;
+      keyMode = "emacs";
+      baseIndex = 1;
+      plugins = (with pkgs.tmuxPlugins; [
+        {
+          plugin = jump;
+        }
+        {
+          plugin = tmux-thumbs;
+          extraConfig = ''
+            set -g @thumbs-key t
+            set -g @thumbs-unique enabled
+            set -g @thumbs-command 'echo -n {} | wl-copy'
+          '';
+        }
+        {
+          plugin = nord;
+          extraConfig = ''
+            set -g @plugin "arcticicestudio/nord-tmux"
+          '';
+        }
+      ]);
+      extraConfig = ''
+        bind  c  new-window      -c "#{pane_current_path}"
+        bind  %  split-window -h -c "#{pane_current_path}"
+        bind '"' split-window -v -c "#{pane_current_path}"
+        set -g renumber-windows on
+      '';
+    };
+
   #programs.emacs = {
     #enable = true;
     #extraPackages = epkgs: [
