@@ -1,4 +1,4 @@
-{ config, pkgs, lib, fg42, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -6,30 +6,30 @@
   home = {
     username = "niloofar";
     homeDirectory = "/home/niloofar";
-    stateVersion = "23.11";
+    stateVersion = "24.11";
 
     packages = with pkgs; [
 
-      # utils
-      ack
-      aria2
-      cmatrix
+      #utils
+      #ack
+      #aria2
+      #cmatrix
       file
       htop
       nix-tree
       sshfs
-      thefuck
+      #thefuck
       tldr
       tmux
       traceroute
       tree
       udiskie
       udisks
-      unzip
+      #unzip
       v2raya
       wget
       whois
-      zip
+      #zip
 
       # desktop
       hyprland
@@ -41,27 +41,27 @@
       wl-clipboard
 
       # gui
-      ark
-      blender
+      libsForQt5.ark
+      #blender
       darktable
-      dolphin
-      gimp
+      libsForQt5.dolphin
+      #gimp
       graphite-kde-theme
-      inkscape
+      #inkscape
       libreoffice
       libsForQt5.filelight
       libsForQt5.konsole
       libsForQt5.qt5ct
       libsForQt5.qt5ct
       lxappearance
-      obs-studio
+      #obs-studio
       pavucontrol
       pcmanfm
-      steam
-      sublime3
-      telegram-desktop
+      #steam
+      #sublime3
+      #telegram-desktop
       terminator
-      vlc
+      #vlc
       zafiro-icons
 
       # browsers
@@ -69,15 +69,15 @@
       librewolf
 
       # code
-      #clang-tools
-      clojure
-      clojure-lsp
-      fg42.outputs.packages.x86_64-linux.default
+      clang-tools
+      #clojure
+      #clojure-lsp
+      #fg42.outputs.packages.x86_64-linux.default
       git
-      leiningen
+      #leiningen
       libpqxx
-      php
-      php83Packages.composer
+      #php
+      #php83Packages.composer
       vim
       virtualenv
     ];

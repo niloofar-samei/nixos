@@ -25,9 +25,15 @@
     };
 
   fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/9833c4f8-b715-422f-b8f4-5c7b92db74ec";
+    { #device = "/dev/disk/by-uuid/9833c4f8-b715-422f-b8f4-5c7b92db74ec";
+      device = "/dev/disk/by-uuid/f9851c88-d2cb-412f-9cf5-0158dbdabfcd";
       fsType = "ext4";
     };
+
+  fileSystems."/nix" = {
+    device = "/dev/disk/by-uuid/c66e324c-657f-4888-bda6-aa6d1468476b";
+    fsType = "ext4";
+  };
 
   swapDevices = [ ];
 
