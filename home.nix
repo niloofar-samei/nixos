@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, fg42, ... }:
 
 {
   nixpkgs.config.allowUnfree = true;
@@ -11,25 +11,25 @@
     packages = with pkgs; [
 
       #utils
-      #ack
-      #aria2
-      #cmatrix
+      ack
+      aria2
+      cmatrix
       file
       htop
       nix-tree
       sshfs
-      #thefuck
+      thefuck
       tldr
       tmux
       traceroute
       tree
       udiskie
       udisks
-      #unzip
+      unzip
       v2raya
       wget
       whois
-      #zip
+      zip
 
       # desktop
       hyprland
@@ -42,26 +42,27 @@
 
       # gui
       libsForQt5.ark
-      #blender
+      blender
       darktable
       libsForQt5.dolphin
-      #gimp
+      gimp
       graphite-kde-theme
-      #inkscape
+      inkscape
       libreoffice
       libsForQt5.filelight
       libsForQt5.konsole
       libsForQt5.qt5ct
       libsForQt5.qt5ct
       lxappearance
-      #obs-studio
+      obs-studio
       pavucontrol
       pcmanfm
-      #steam
-      #sublime3
-      #telegram-desktop
+      jetbrains.pycharm-community-src
+      steam
+      sublime3
+      telegram-desktop
       terminator
-      #vlc
+      vlc
       zafiro-icons
 
       # browsers
@@ -70,14 +71,14 @@
 
       # code
       clang-tools
-      #clojure
-      #clojure-lsp
-      #fg42.outputs.packages.x86_64-linux.default
+      clojure
+      clojure-lsp
+      fg42.outputs.packages.x86_64-linux.default
       git
-      #leiningen
+      leiningen
       libpqxx
-      #php
-      #php83Packages.composer
+      php
+      php83Packages.composer
       vim
       virtualenv
     ];
@@ -118,13 +119,13 @@
       '';
     };
 
-  #programs.emacs = {
-    #enable = true;
-    #extraPackages = epkgs: [
-      #epkgs.nix-mode
-      #epkgs.magit
-    #];
-  #};
+  programs.emacs = {
+    enable = true;
+    extraPackages = epkgs: [
+      epkgs.nix-mode
+      epkgs.magit
+    ];
+  };
 
   programs.waybar = {
     enable = true;
