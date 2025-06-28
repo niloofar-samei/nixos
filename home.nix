@@ -16,9 +16,10 @@
       cmatrix
       file
       htop
+      hiddify-app
       nix-tree
       sshfs
-      thefuck
+      #thefuck
       tldr
       tmux
       traceroute
