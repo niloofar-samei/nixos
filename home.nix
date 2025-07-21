@@ -8,15 +8,22 @@
     homeDirectory = "/home/niloofar";
     stateVersion = "24.11";
 
+    sessionVariables = {                                                                                        
+      http_proxy = "http://127.0.0.1:7890";
+      https_proxy = "http://127.0.0.1:7890";
+      ALL_PROXY = "socks5://127.0.0.1:7890";                                                                         };  
+
     packages = with pkgs; [
 
       #utils
+      amnezia-vpn
       ack
       aria2
       cmatrix
       file
       htop
-      hiddify-app
+      xorg.xhost
+      #hiddify-app
       nix-tree
       sshfs
       #thefuck
@@ -44,7 +51,7 @@
       # gui
       libsForQt5.ark
       blender
-      darktable
+      #darktable
       libsForQt5.dolphin
       gimp
       graphite-kde-theme
@@ -57,8 +64,8 @@
       lxappearance
       obs-studio
       pavucontrol
-      pcmanfm
-      jetbrains.pycharm-community-src
+      #pcmanfm
+      #jetbrains.pycharm-community-src
       steam
       sublime3
       telegram-desktop

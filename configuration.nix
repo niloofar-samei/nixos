@@ -16,7 +16,10 @@
     hostName = "nixos"; # Define your hostname.
 
     # Enable networking
-    networkmanager.enable = true;
+    networkmanager = {
+      enable = true;
+      plugins = (with pkgs; [networkmanager-openvpn]);
+    };
 
     nameservers = [ "1.1.1.1" "1.0.0.1" ];
   };
@@ -122,7 +125,7 @@
 
   # Enable sound with pipewire.
   #sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
 
   users = { 
